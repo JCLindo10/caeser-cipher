@@ -1,9 +1,7 @@
 """
 
     Main entry point for the caeser-cipher program.
-
     Author: Jakob Lindo
-
     Created: 4/13/2023
 
 """
