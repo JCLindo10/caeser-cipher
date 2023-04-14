@@ -14,4 +14,4 @@ sys.path.append("..")
 class TestCaeserCipher(unittest.TestCase):
     def test_encrypt(self):
         self.assertEqual(main.encrypt("e", 4, "test.txt"), "alex")
-        self.assertEqual(main.encrypt("e", 30, "test2.txt"), "alex")
+        self.assertEqual(main.encrypt("e", 30, "test.txt"), "alex")
