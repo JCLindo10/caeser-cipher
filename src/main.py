@@ -10,6 +10,7 @@
 
 import sys
 from optparse import OptionParser
+from cipher import encrypt, decrypt
 
 
 def main():
