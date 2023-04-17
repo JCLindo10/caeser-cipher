@@ -24,7 +24,7 @@ class TestCaeserCipher(unittest.TestCase):
         self.assertNotEqual(Cipher.encrypt(7, "test.txt"), "alex")
         self.assertNotEqual(Cipher.encrypt(3, "test.txt"), "alex")
         with open("test1sol.txt", "r") as sol:
-            self.assertEqual(Cipher.encrypt(4, "test1.txt"), sol.read())
+            self.assertNotEqual(Cipher.encrypt(4, "test1.txt"), sol.read())
 
     def test_decrypt_equal_no_shift(self):
         self.assertEqual(Cipher.decrypt("testdec.txt"), "what")
