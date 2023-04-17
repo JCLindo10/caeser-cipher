@@ -26,7 +26,10 @@ def encrypt(shift, file):
     with open(file, "r") as plaintext:
         for line in plaintext:
             for char in line:
-                encr += alphabet[(alphabet.index(char) + shift) % 26]
+                if char in alphabet:
+                    encr += alphabet[(alphabet.index(char) + shift) % 26]
+                else:
+                    encr += char
     return encr
 
 
