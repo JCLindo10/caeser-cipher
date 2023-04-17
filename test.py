@@ -23,7 +23,7 @@ class TestCaeserCipher(unittest.TestCase):
     def test_encrypt_not_equal(self):
         self.assertNotEqual(Cipher.encrypt(7, "test.txt"), "alex")
         self.assertNotEqual(Cipher.encrypt(3, "test.txt"), "alex")
-        with open("test1sol.txt", r) as sol:
+        with open("test1sol.txt", "r") as sol:
             self.assertEqual(Cipher.encrypt(4, "test1.txt"), sol.read())
 
     def test_decrypt_equal_no_shift(self):
