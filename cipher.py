@@ -40,6 +40,8 @@ def decrypt(file, shift=-1):
                     # Try all 26 shift values, comparing the decrypted string against
                     # a dictionary of words. The most hits is the most likely shift.
                     # Possibly break out early if every single word is a hit?
-                    pass
+                    decr = "This should fail a test"
                 else:
                     decr += alphabet[(alphabet.index(char) - shift) % 26]
+
+    return decr
