@@ -19,7 +19,14 @@
 
 
 def encrypt(shift, file):
-    pass
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    encr = ""
+
+    with open(file, "r") as plaintext:
+        for line in plaintext:
+            for char in line:
+                encr += alphabet[(alphabet.index(char) + shift) % 26]
+    return encr
 
 
 def decrypt(file, shift=-1):
