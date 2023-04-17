@@ -5,7 +5,7 @@
     Created: 4/13/2023
 
 """
-from ..src import main
+from src import main
 import unittest
 import sys
 sys.path.append("..")
@@ -29,3 +29,7 @@ class TestCaeserCipher(unittest.TestCase):
         self.assertNotEqual(main.decrypt("test.txt", 7), "what")
         self.assertNotEqual(main.decrypt("test.txt", 3), "what")
         self.assertNotEqual(main.decrypt("test.txt"), "tahw")
+
+
+if __name__ == "__main__":
+    unittest.main()
