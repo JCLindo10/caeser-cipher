@@ -22,14 +22,18 @@ class TestCaeserCipher(unittest.TestCase):
         self.assertNotEqual(Cipher.encrypt(7, "test.txt"), "alex")
         self.assertNotEqual(Cipher.encrypt(3, "test.txt"), "alex")
 
-    def test_decrypt_equal(self):
-        self.assertEqual(Cipher.decrypt("test.txt", 4), "what")
-        self.assertEqual(Cipher.decrypt("test.txt", 30), "what")
+    def test_decrypt_equal_no_shift(self):
         self.assertEqual(Cipher.decrypt("test.txt"), "what")
 
-    def test_decrypt_not_equal(self):
+    def test_decrypt_equal_with_shift(self):
+        self.assertEqual(Cipher.decrypt("test.txt", 4), "what")
+        self.assertEqual(Cipher.decrypt("test.txt", 30), "what")
+
+    def test_decrypt_not_equal_with_shift(self):
         self.assertNotEqual(Cipher.decrypt("test.txt", 7), "what")
         self.assertNotEqual(Cipher.decrypt("test.txt", 3), "what")
+
+    def test_decrypt_not_equal_no_shift(self):
         self.assertNotEqual(Cipher.decrypt("test.txt"), "tahw")
 
 
