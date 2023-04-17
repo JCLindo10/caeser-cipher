@@ -10,6 +10,8 @@ import unittest
 # import sys
 # sys.path.append("..")
 
+# Test1sol.txt expects a shift of 7
+
 
 class TestCaeserCipher(unittest.TestCase):
     def test_encrypt_equal(self):
