@@ -17,9 +17,10 @@
     
 """
 
+alphabet = "abcdefghijklmnopqrstuvwxyz"
+
 
 def encrypt(shift, file):
-    alphabet = "abcdefghijklmnopqrstuvwxyz"
     encr = ""
 
     with open(file, "r") as plaintext:
@@ -30,4 +31,15 @@ def encrypt(shift, file):
 
 
 def decrypt(file, shift=-1):
-    pass
+    decr = ""
+
+    with open(file, "r") as ciphertext:
+        for line in ciphertext:
+            for char in line:
+                if shift == -1:
+                    # Try all 26 shift values, comparing the decrypted string against
+                    # a dictionary of words. The most hits is the most likely shift.
+                    # Possibly break out early if every single word is a hit?
+                    pass
+                else:
+                    decr += alphabet[(alphabet.index(char) - shift) % 26]
